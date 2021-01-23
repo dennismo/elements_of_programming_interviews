@@ -9,9 +9,12 @@ def nice_number(n, m):
     k, s = -1, 0
     while s < n:
         k += 1
-        s += m^k
-    
+        s += m**k
+        
     for i in reversed(range(k)):
-        if s - i^m > n:
-            s -= i^m
+        if s - i**m > n:
+            s -= i**m
     return s
+
+print(nice_number(29, 3))
+print(nice_number(31, 3))
